@@ -1,14 +1,27 @@
-// declare variables here.
+//  declare variables here.
 let tableRow = $("<tr>'what to do'</tr>");
 let createEvent = $("<td>").text("");
 let saveBtn = $("");
-// let timeArray = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
+//  let timeArray = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 let myLabel = $("<label>");
 let newDiv = $("<div/>");
 let input = $("<input type='text' placeholder='What do you need to schedule to do today?' name='label-input'>");
+let myStorage = window.localStorage;
 
+//  the current day is displayed at the top of the calendar.
 let currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
 $("#currentDay").text(currentDay);
+
+//  determine the current hour. 
+let now = new Date();
+console.log(now);
+let hour = now.getHours();
+console.log(hour);
+
+// if id to identify the textfield is = currentDay, then set style to .present
+// if id to identify the textfield is < currentDay, then set the style to .past
+// if id to identify the textfield is > currentDay, then set the style to .future
+
 // function createCalendar() {
 //     for (let i = 0; i < 8; i++) {
 //         myLabel.addClass("time-slot");
@@ -22,15 +35,9 @@ $("#currentDay").text(currentDay);
 // createCalendar();
 
 $(".saveBtn").on( "click", function() {
-    var myClass = $(this).attr("class");
+    var myClass = $(this).attr("id");
     console.log(myClass);
   });
-
-  function init() {
-
-  }
-
-
 
 // add event listener to add event button
 // every time I click it looks to see what input it is next to, gets text, and writes to local storage.
