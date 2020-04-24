@@ -12,6 +12,8 @@ let myStorage = window.localStorage;
 let currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
 $("#currentDay").text(currentDay);
 
+// init()
+
 //  determine the current hour. 
 let now = new Date();
 console.log(now);
@@ -34,11 +36,33 @@ console.log(hour);
 // }
 // createCalendar();
 
-$(".saveBtn").on( "click", function() {
-    var myClass = $(this).attr("id");
-    console.log(myClass);
-  });
+// $(".saveBtn").on( "click", function() {
+//     var myClass = $(this).attr("id");
+//     console.log(myClass);
+//   });
 
+  $(".saveBtn").on( "click", function(event) {
+    event.preventDefault();
+    buttonID=this.id;
+    var x = document.getElementById(buttonID);
+    console.log(buttonID);
+    let userInput = $("#hour-9").val().trim();
+    localStorage.setItem("storedItem", JSON.stringify(userInput))
+    console.log(localStorage.getItem("storedItem"));
+
+});
+    
+    
+
+// function init() {
+//   // Get stored todos from localStorage
+//   // Parsing the JSON string to an object
+//   let storedTodos = JSON.parse(localStorage.getItem("todos"));
+
+//   // If todos were retrieved from localStorage, update the todos array to it
+//   if (storedTodos !== null) {
+//     todos = storedTodos;
+//   }}
 // add event listener to add event button
 // every time I click it looks to see what input it is next to, gets text, and writes to local storage.
 // access input text when any click happens.
