@@ -1,15 +1,13 @@
 //  declare variables here.
-let tableRow = $("<tr>'what to do'</tr>");
-let createEvent = $("<td>").text("");
 let saveBtn = $("");
-//  let timeArray = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 let myLabel = $("<label>");
 let newDiv = $("<div/>");
 let input = $("<input type='text' placeholder='What do you need to schedule to do today?' name='label-input'>");
 let myStorage = window.localStorage;
+//  let timeArray = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
 //  the current day is displayed at the top of the calendar.
-let currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
+let currentDay = moment().format('MMMM Do YYYY,');
 $("#currentDay").text(currentDay);
 
 // init()
@@ -19,6 +17,53 @@ let now = new Date();
 console.log(now);
 let hour = now.getHours();
 console.log(hour);
+// styling based on current hour
+if (hour > 2) {
+    $("#input-text").addClass("present");
+}
+
+$(".saveBtn").on("click", function (event) {
+    event.preventDefault();
+    let buttonID = $(this).attr("id");
+    console.log(buttonID);
+    
+    let userInput9 = $("#hour-9").val().trim();
+    localStorage.setItem("storedItem9", JSON.stringify(userInput9))
+    console.log(localStorage.getItem("storedItem9"));
+    
+    let userInput10 = $("#hour-10").val().trim();
+    localStorage.setItem("storedItem10", JSON.stringify(userInput10))
+    console.log(localStorage.getItem("storedItem10"));
+    
+    let userInput11 = $("#hour-11").val().trim();
+    localStorage.setItem("storedItem11", JSON.stringify(userInput11))
+    console.log(localStorage.getItem("storedItem11"));
+    
+    let userInput12 = $("#hour-12").val().trim();
+    localStorage.setItem("storedItem12", JSON.stringify(userInput12))
+    console.log(localStorage.getItem("storedItem12"));
+    
+    let userInput13 = $("#hour-13").val().trim();
+    localStorage.setItem("storedItem13", JSON.stringify(userInput13))
+    console.log(localStorage.getItem("storedItem13"));
+    
+    let userInput14 = $("#hour-14").val().trim();
+    localStorage.setItem("storedItem14", JSON.stringify(userInput14))
+    console.log(localStorage.getItem("storedItem14"));
+    
+    let userInput15 = $("#hour-15").val().trim();
+    localStorage.setItem("storedItem15", JSON.stringify(userInput15))
+    console.log(localStorage.getItem("storedItem15"));
+    
+    let userInput16 = $("#hour-16").val().trim();
+    localStorage.setItem("storedItem16", JSON.stringify(userInput16))
+    console.log(localStorage.getItem("storedItem16"));
+    
+    let userInput17 = $("#hour-17").val().trim();
+    localStorage.setItem("storedItem17", JSON.stringify(userInput17))
+    console.log(localStorage.getItem("storedItem17"));
+
+});
 
 // if id to identify the textfield is = currentDay, then set style to .present
 // if id to identify the textfield is < currentDay, then set the style to .past
@@ -41,18 +86,84 @@ console.log(hour);
 //     console.log(myClass);
 //   });
 
-  $(".saveBtn").on( "click", function(event) {
-    event.preventDefault();
-    buttonID=this.id;
-    var x = document.getElementById(buttonID);
-    console.log(buttonID);
-    let userInput = $("#hour-9").val().trim();
-    localStorage.setItem("storedItem", JSON.stringify(userInput))
-    console.log(localStorage.getItem("storedItem"));
 
-});
-    
-    
+// $(".btn-10").on("click", function (event) {
+//     event.preventDefault();
+//     let buttonID = $(this).attr("id");
+//     console.log(buttonID);
+//     let userInput10 = $("#hour-10").val().trim();
+//     localStorage.setItem("storedItem10", JSON.stringify(userInput10))
+//     console.log(localStorage.getItem("storedItem10"));
+
+// });
+// $(".btn-11").on("click", function (event) {
+//     event.preventDefault();
+//     let buttonID = $(this).attr("id");
+//     console.log(buttonID);
+//     let userInput11 = $("#hour-11").val().trim();
+//     localStorage.setItem("storedItem11", JSON.stringify(userInput11))
+//     console.log(localStorage.getItem("storedItem11"));
+
+// });
+// $(".btn-12").on("click", function (event) {
+//     event.preventDefault();
+//     let buttonID = $(this).attr("id");
+//     console.log(buttonID);
+//     let userInput12 = $("#hour-12").val().trim();
+//     localStorage.setItem("storedItem12", JSON.stringify(userInput12))
+//     console.log(localStorage.getItem("storedItem12"));
+
+// });
+// $(".btn-13").on("click", function (event) {
+//     event.preventDefault();
+//     let buttonID = $(this).attr("id");
+//     console.log(buttonID);
+//     let userInput13 = $("#hour-13").val().trim();
+//     localStorage.setItem("storedItem13", JSON.stringify(userInput13))
+//     console.log(localStorage.getItem("storedItem13"));
+
+// });
+// $(".btn-14").on("click", function (event) {
+//     event.preventDefault();
+//     let buttonID = $(this).attr("id");
+//     console.log(buttonID);
+//     let userInput14 = $("#hour-14").val().trim();
+//     localStorage.setItem("storedItem14", JSON.stringify(userInput14))
+//     console.log(localStorage.getItem("storedItem14"));
+
+// });
+// $(".btn-15").on("click", function (event) {
+//     event.preventDefault();
+//     let buttonID = $(this).attr("id");
+//     console.log(buttonID);
+//     let userInput15 = $("#hour-15").val().trim();
+//     localStorage.setItem("storedItem15", JSON.stringify(userInput15))
+//     console.log(localStorage.getItem("storedItem15"));
+
+// });
+// $(".btn-16").on("click", function (event) {
+//     event.preventDefault();
+//     let buttonID = $(this).attr("id");
+//     console.log(buttonID);
+//     let userInput16 = $("#hour-16").val().trim();
+//     localStorage.setItem("storedItem16", JSON.stringify(userInput16))
+//     console.log(localStorage.getItem("storedItem16"));
+
+// });
+// $(".btn-17").on("click", function (event) {
+//     event.preventDefault();
+//     let buttonID = $(this).attr("id");
+//     console.log(buttonID);
+//     let userInput17 = $("#hour-17").val().trim();
+//     localStorage.setItem("storedItem17", JSON.stringify(userInput17))
+//     console.log(localStorage.getItem("storedItem17"));
+
+// });
+
+
+
+
+
 
 // function init() {
 //   // Get stored todos from localStorage
