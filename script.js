@@ -1,11 +1,8 @@
 //  declare variables here.
 let saveBtn = $("");
-let myLabel = $("<label>");
-let newDiv = $("<div/>");
-let input = $("<input type='text' placeholder='What do you need to schedule to do today?' name='label-input'>");
-
 
 // local storage will populate the input fields with any stored data...
+function retrieveLocalStorage () {
 let key9 = JSON.parse(localStorage.getItem("storedItem9"));
 $("#hour-9").val(key9);
 
@@ -32,6 +29,7 @@ $("#hour-16").val(key16);
 
 let key17 = JSON.parse(localStorage.getItem("storedItem17"));
 $("#hour-17").val(key17);
+}
 
 //  the current day is displayed at the top of the calendar...
 let currentDay = moment().format('MMMM Do YYYY,');
@@ -42,7 +40,7 @@ let now = new Date();
 let hour = now.getHours();
 console.log(hour);
 
-// styling based on current hour...
+// CSS styling based on the current hour...
 for (let i = 9; i < 18; i++) {
     let currentId = "#hour-" + i;
     let currentHourBlock = $(currentId);
@@ -92,3 +90,5 @@ $(".saveBtn").on("click", function (event) {
     let userInput17 = $("#hour-17").val().trim();
     localStorage.setItem("storedItem17", JSON.stringify(userInput17))
 });
+
+retrieveLocalStorage ()
