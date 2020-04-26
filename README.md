@@ -25,7 +25,7 @@ Upon loading the browser page, the user can enter text into one of 9 fields.  Up
 
 
 ## Credits
-Moment.js](https://momentjs.com/
+Moment.js (https://momentjs.com/
 
 ## License
 
@@ -52,5 +52,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ## Contributing
 
-If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
+[Contributor Covenant](https://www.contributor-covenant.org/)
 
