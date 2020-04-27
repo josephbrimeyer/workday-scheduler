@@ -32,7 +32,7 @@ $("#hour-17").val(key17);
 }
 
 //  the current day is displayed at the top of the calendar...
-let currentDay = moment().format('MMMM Do YYYY,');
+let currentDay = moment().format('MMMM Do YYYY');
 $("#currentDay").text(currentDay);
 
 //  determine the current hour... 

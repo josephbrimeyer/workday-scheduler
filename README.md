@@ -8,7 +8,7 @@ Workday-Scheduler is a simple calendar application that allows the user to save 
 
 ## Installation
 
-Workday-Scheduler is hosted on github.  The installation requires that the user launch the applicaiton in their browser by clicking the following link:
+Workday-Scheduler is hosted on github.  The installation requires that the user launch the application in their browser by clicking the following link:
 
 https://josephbrimeyer.github.io/workday-scheduler/
 
@@ -25,7 +25,7 @@ Upon loading the browser page, the user can enter text into one of 9 fields.  Up
 
 
 ## Credits
-Moment.js (https://momentjs.com/
+Moment.js https://momentjs.com/
 
 ## License
 
