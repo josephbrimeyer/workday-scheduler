@@ -38,7 +38,6 @@ $("#currentDay").text(currentDay);
 //  determine the current hour... 
 let now = new Date();
 let hour = now.getHours();
-console.log(hour);
 
 // CSS styling based on the current hour...
 for (let i = 9; i < 18; i++) {
@@ -61,8 +60,7 @@ for (let i = 9; i < 18; i++) {
 $(".saveBtn").on("click", function (event) {
     event.preventDefault();
     let buttonID = $(this).attr("id");
-    console.log(buttonID);
-
+    
     let userInput9 = $("#hour-9").val().trim();
     localStorage.setItem("storedItem9", JSON.stringify(userInput9))
 
