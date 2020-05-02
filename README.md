@@ -17,7 +17,7 @@ https://josephbrimeyer.github.io/workday-scheduler/
 
 Here is a photo of the deployed application:
 
-! [Workday-Calendar] (workday-scheduler.png)
+![Workday-Calendar](workday-scheduler.png)
 
 ## Usage 
 
